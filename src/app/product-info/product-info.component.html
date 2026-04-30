@@ -1,0 +1,43 @@
+<div class="container py-5">
+
+  <div class="row align-items-center">
+
+    <!-- Product Image -->
+    <div class="col-md-6 text-center mb-4">
+      <div class="product-img-wrapper">
+        <img [src]="product.image" class="img-fluid product-details-img">
+      </div>
+    </div>
+
+    <!-- Product Info -->
+    <div class="col-md-6">
+
+      <h2 class="product-name mb-3">
+        {{product.title}}
+      </h2>
+
+      <h3 class="product-price mb-3">
+        {{product.price | currency:'INR'}}
+      </h3>
+
+      <p class="product-desc mb-4">
+        {{product.description}}
+      </p>
+
+      <div class="d-flex gap-3">
+
+        <button class="btn btn-outline-warning rounded-pill px-4 py-2 fw-semibold shadow-sm">
+          Add To Cart
+        </button>
+
+        <button class="btn btn-outline-dark rounded-pill px-4 py-2 fw-semibold">
+          Buy Now
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

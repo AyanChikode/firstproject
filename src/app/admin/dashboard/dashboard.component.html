@@ -1,0 +1,81 @@
+<div class="container py-5">
+  <div class="row g-4">
+
+    <!-- Form -->
+    <div class="col-lg-4">
+      <div class="category-card p-4">
+
+        <h3 class="text-center fw-bold mb-4 title-text ">
+          Category
+        </h3>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Name</label>
+
+            <input 
+              type="text"
+              class="form-control custom-input"
+              formControlName="name"
+              placeholder="Enter category name">
+          </div>
+
+          <button type="submit" class="btn add-btn w-100 btn btn-outline-warning rounded-pill px-4 py-2 fw-semibold shadow-sm ">
+            {{ isEdit ? 'Update Category' : 'Add Category' }}
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="col-lg-8">
+      <div class="table-card p-4">
+
+        <h3 class="fw-bold mb-4 title-text">
+          Category List
+        </h3>
+
+        <div class="table-responsive">
+
+          <table class="table custom-table align-middle">
+
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th width="180">Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let item of categories; index as i">
+                <td>{{ i + 1 }}</td>
+                <td>{{ item.name }}</td>
+                <td>
+                  <button 
+                    class="btn btn-outline-warning rounded-pill px-4 py-2 fw-semibold shadow-sm"
+                    (click)="onEdit(item)">
+                    Edit
+                  </button>
+
+                  <button 
+                    class="btn btn-outline-danger rounded-pill fw-semibold shadow-sm"
+                    (click)="onDelete(item.id)">
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<div class="container-fluid p-0">
+  <div class="row g-0">
+
+    <!-- Sidebar -->
+    <div class="col-lg-2">
+
+      <div class="sidebar">
+
+        <h4 class="text-center fw-bold py-4 border-bottom border-light">
+          Admin Panel
+        </h4>
+
+        <ul class="nav flex-column px-3 mt-3">
+
+          <li class="nav-item mb-2">
+            <a 
+              routerLink="dashboard"
+              routerLinkActive="active-link"
+              class="nav-link sidebar-link">
+              <i class="fas fa-home me-2"></i>
+              Dashboard
+            </a>
+          </li>
+
+          <li class="nav-item mb-2">
+            <a 
+              routerLink="addproduct"
+              routerLinkActive="active-link"
+              class="nav-link sidebar-link">
+              <i class="fas fa-plus me-2"></i>
+              Add Product
+            </a>
+          </li>
+
+          <li class="nav-item mb-2">
+            <a 
+              routerLink="product"
+              routerLinkActive="active-link"
+              class="nav-link sidebar-link">
+              <i class="fas fa-box me-2"></i>
+              Manage Products
+            </a>
+          </li>
+
+          <li class="nav-item mt-4">
+            <button 
+              class="btn logout-btn w-100 btn btn-outline-light rounded-pill px-4 py-2 fw-semibold shadow-sm"
+              (click)="btnLogout()">
+              Logout
+            </button>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-lg-10">
+
+      <!-- Topbar -->
+      <nav class="topbar d-flex justify-content-between align-items-center px-4">
+
+        <h5 class="mb-0 fw-bold">
+          Dashboard
+        </h5>
+
+        <span class="admin-badge">
+          Admin
+        </span>
+
+      </nav>
+
+      <!-- Router Content -->
+      <div class="main-content p-4">
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+
+  </div>
+</div>

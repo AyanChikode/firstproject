@@ -1,0 +1,102 @@
+/* Dashboard Cards */
+.dashboard-card{
+    background: linear-gradient(145deg, #ffffff, #fff9e6);
+    border: 2px solid #f4c430;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(244,196,48,0.18);
+    transition: 0.3s;
+}
+
+.dashboard-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(244,196,48,0.25);
+}
+
+/* Sidebar */
+.sidebar{
+    background: linear-gradient(180deg, #f4c430, #ffca28);
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover{
+    background: rgba(255,255,255,0.18);
+    padding-left: 20px;
+}
+
+/* Top Navbar */
+.topbar{
+    background: #ffffff;
+    border-bottom: 2px solid #f4c430;
+    padding: 15px 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Buttons */
+.btn-theme{
+    background: #f4c430;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-theme:hover{
+    background: #e0b000;
+}
+
+/* Round Button */
+.round-btn{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f4c430;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.round-btn:hover{
+    background-color: #e0b000;
+    transform: scale(1.1);
+}
+
+/* Tables */
+.table{
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.table thead{
+    background: #f4c430;
+    color: white;
+}
+
+.table tbody tr:nth-child(even){
+    background: #fffdf5;
+}
+
+.table tbody tr:hover{
+    background: #fff4cc;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5{
+    color: #222;
+}

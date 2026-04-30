@@ -1,0 +1,73 @@
+/* Dashboard Dark Yellow + White Theme */
+
+body{
+    background: #fffdf7;
+}
+
+/* Sidebar */
+.sidebar{
+    min-height: 100vh;
+    background: linear-gradient(180deg, #c99700, #e0b000);
+    color: white;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.08);
+}
+
+/* Sidebar Links */
+.sidebar-link{
+    color: white !important;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sidebar-link:hover{
+    background: rgba(255,255,255,0.18);
+    padding-left: 22px;
+}
+
+/* Active Link */
+.active-link{
+    background: white;
+    color: #c99700 !important;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* Logout Button */
+.logout-btn{
+    background: white;
+    color: #c99700;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.logout-btn:hover{
+    background: #fff6d6;
+}
+
+/* Topbar */
+.topbar{
+    height: 70px;
+    background: white;
+    border-bottom: 2px solid #d4a300;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+/* Badge */
+.admin-badge{
+    background: #c99700;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Main Content */
+.main-content{
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(135deg, #fffdf7, #ffffff);
+}

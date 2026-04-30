@@ -1,1 +1,85 @@
-<h1>helllo home</h1>
+<!-- home.component.html -->
+
+<!-- Hero Section -->
+<section class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold text-dark">
+          Discover Your Perfect Style
+        </h1>
+
+        <p class="lead text-muted mt-3">
+          Shop premium shoes, t-shirts, slippers and more with best quality and affordable prices.
+        </p>
+
+        <div class="mt-4">
+          <a routerLink="/products" class="btn btn-warning text-white px-4 py-2 me-3">
+            Shop Now
+          </a>
+
+          <a routerLink="/about" class="btn btn-outline-dark px-4 py-2">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 text-center mt-4 mt-lg-0">
+        <img 
+          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+          class="img-fluid hero-img"
+          alt="Shoes">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+
+    <h2 class="fw-bold mb-5">Popular Categories</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card category-card p-4 border-0 shadow">
+          <h4 class="fw-bold text-warning">Shoes</h4>
+          <p class="text-muted">Premium branded shoes collection.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card category-card p-4 border-0 shadow">
+          <h4 class="fw-bold text-warning">T-Shirts</h4>
+          <p class="text-muted">Stylish and comfortable t-shirts.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card category-card p-4 border-0 shadow">
+          <h4 class="fw-bold text-warning">Slippers</h4>
+          <p class="text-muted">Comfortable daily wear slippers.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Offer Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="offer-box text-center p-5">
+      <h2 class="fw-bold text-dark">Special Offer</h2>
+      <p class="lead text-muted">
+        Get up to 50% OFF on selected products.
+      </p>
+      <a routerLink="/products" class="btn btn-warning text-white px-4 py-2">
+        Explore Deals
+      </a>
+    </div>
+  </div>
+</section>

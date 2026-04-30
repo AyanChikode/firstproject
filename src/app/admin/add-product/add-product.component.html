@@ -1,0 +1,138 @@
+<div class="container mt-4 add-product-card">
+
+  <h5 class="page-title mb-4">
+    ADMIN / ADD PRODUCT
+  </h5>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="row g-3">
+
+      <!-- Title -->
+      <div class="col-md-6">
+        <label class="form-label">Title</label>
+
+        <input 
+          type="text"
+          class="form-control custom-input"
+          formControlName="title"
+          placeholder="Enter product title">
+
+        <small 
+          class="text-danger"
+          *ngIf="form.get('title')?.touched && form.get('title')?.invalid">
+          Title is required
+        </small>
+      </div>
+
+      <!-- Age -->
+      <div class="col-md-6">
+        <label class="form-label">Age</label>
+
+        <select class="form-control custom-input" formControlName="age">
+          <option value="">Choose Age...</option>
+          <option value="Kids">Kids</option>
+          <option value="Adult">Adult</option>
+        </select>
+      </div>
+
+      <!-- Price -->
+      <div class="col-md-4">
+        <label class="form-label">Price</label>
+
+        <input 
+          type="number"
+          class="form-control custom-input"
+          formControlName="price"
+          placeholder="Enter price">
+
+        <small 
+          class="text-danger"
+          *ngIf="form.get('price')?.touched && form.get('price')?.invalid">
+          Price is required
+        </small>
+      </div>
+
+      <!-- MRP -->
+      <div class="col-md-4">
+        <label class="form-label">MRP</label>
+
+        <input 
+          type="number"
+          class="form-control custom-input"
+          formControlName="mrp"
+          placeholder="Enter MRP">
+      </div>
+
+      <!-- Image -->
+      <div class="col-md-4">
+        <label class="form-label">Image URL</label>
+
+        <input 
+          type="text"
+          class="form-control custom-input"
+          formControlName="image"
+          placeholder="Paste image URL">
+
+        <div class="preview-box mt-2" *ngIf="form.value.image">
+          <img 
+            [src]="form.value.image"
+            class="img-fluid preview-img">
+        </div>
+      </div>
+
+      <!-- Brand -->
+      <div class="col-md-6">
+        <label class="form-label">Brand</label>
+
+        <select class="form-control custom-input" formControlName="brand">
+          <option value="">Choose Brand...</option>
+          <option>Nike</option>
+          <option>Adidas</option>
+          <option>Puma</option>
+        </select>
+      </div>
+
+      <!-- Category -->
+      <div class="col-md-6">
+        <label class="form-label">Category</label>
+
+        <select class="form-control custom-input" formControlName="category">
+          <option value="">Choose Category...</option>
+          <option>Shoes</option>
+          <option>Clothes</option>
+        </select>
+      </div>
+
+      <!-- Description -->
+      <div class="col-md-12">
+        <label class="form-label">Description</label>
+
+        <textarea 
+          rows="4"
+          class="form-control custom-input"
+          formControlName="description"
+          placeholder="Enter product description"></textarea>
+      </div>
+
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-4 d-flex gap-3">
+
+      <button type="submit" class="btn save-btn btn btn-outline-warning rounded-pill px-4 py-2 fw-semibold shadow-sm">
+        {{ isEdit ? 'Update Product' : 'Add Product' }}
+      </button>
+
+      <button 
+        type="button"
+        class="btn reset-btn btn btn-outline-secondary rounded-pill  fw-semibold shadow-sm"
+        (click)="resetForm()">
+        Reset
+      </button>
+
+    </div>
+
+  </form>
+
+</div>
