@@ -1,5 +1,11 @@
 /* Product List Theme */
 
+body{
+    background: #fffdf5;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Card */
 .product-card{
     background: #ffffff;
     padding: 28px;
@@ -10,23 +16,10 @@
 
 /* Title */
 .page-title{
+    font-size: 28px;
     font-weight: 700;
     color: #222;
     letter-spacing: .5px;
-}
-
-/* Add Button */
-.add-btn{
-    background: linear-gradient(45deg,#ffe082,#ffd54f);
-    border: none;
-    color: #222;
-    font-weight: 600;
-    padding: 10px 18px;
-    border-radius: 10px;
-}
-
-.add-btn:hover{
-    background: linear-gradient(45deg,#ffd54f,#ffca28);
 }
 
 /* Table */
@@ -44,17 +37,19 @@
 .custom-table th{
     font-weight: 700;
     border: none;
-    padding: 14px;
+    padding: 15px;
+    white-space: nowrap;
 }
 
 .custom-table td{
-    padding: 14px;
+    padding: 15px;
     vertical-align: middle;
+    border-color: #fff3cd;
 }
 
 .custom-table tbody tr{
     background: #ffffff;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .custom-table tbody tr:nth-child(even){
@@ -63,38 +58,61 @@
 
 .custom-table tbody tr:hover{
     background: #fff7d6;
+    transform: scale(1.01);
 }
 
-/* Brand Badge */
-.brand-badge{
-    background: #fff3b0;
-    color: #7a5b00;
-    padding: 7px 10px;
-    border-radius: 20px;
-    font-weight: 600;
+/* Product Image */
+.product-img{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #ffe082;
+    padding: 3px;
+    background: white;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
 }
 
-/* Buttons */
-.edit-btn{
-    background: #ffd54f;
-    color: #222;
+/* Buttons Common */
+.edit-btn,
+.delete-btn{
+    min-width: 100px;
+    padding: 10px 18px;
     border: none;
-    border-radius: 8px;
-    font-weight: 600;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+/* Edit Button */
+.edit-btn{
+    background: linear-gradient(135deg,#ffd54f,#ffb300);
+    color: #222;
+    box-shadow: 0 6px 14px rgba(255,193,7,0.25);
 }
 
 .edit-btn:hover{
-    background: #ffca28;
+    background: linear-gradient(135deg,#ffca28,#ff9800);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 18px rgba(255,152,0,0.35);
 }
 
+/* Delete Button */
 .delete-btn{
-    background: white;
-    color: #c62828;
-    border: 1px solid #ffcdd2;
-    border-radius: 8px;
-    font-weight: 600;
+    background: linear-gradient(135deg,#ff8a80,#e53935);
+    color: white;
+    box-shadow: 0 6px 14px rgba(244,67,54,0.25);
 }
 
 .delete-btn:hover{
-    background: #ffebee;
+    background: linear-gradient(135deg,#ff5252,#c62828);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 18px rgba(244,67,54,0.35);
+}
+
+/* Button Click */
+.edit-btn:active,
+.delete-btn:active{
+    transform: scale(0.96);
 }

@@ -45,3 +45,7 @@
     color: #f4c430;
     padding-left: 5px;
 }
+.badge {
+  font-size: 10px;
+  padding: 5px 7px;
+}

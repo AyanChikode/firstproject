@@ -27,12 +27,12 @@
 
       <!-- Age -->
       <div class="col-md-6">
-        <label class="form-label">Age</label>
+        <label class="form-label">Gender</label>
 
         <select class="form-control custom-input" formControlName="age">
-          <option value="">Choose Age...</option>
-          <option value="Kids">Kids</option>
-          <option value="Adult">Adult</option>
+          <option value="">Choose Gender...</option>
+          <option value="Kids">Male</option>
+          <option value="Adult">Female</option>
         </select>
       </div>
 
@@ -74,11 +74,7 @@
           formControlName="image"
           placeholder="Paste image URL">
 
-        <div class="preview-box mt-2" *ngIf="form.value.image">
-          <img 
-            [src]="form.value.image"
-            class="img-fluid preview-img">
-        </div>
+ 
       </div>
 
       <!-- Brand -->
@@ -99,8 +95,8 @@
 
         <select class="form-control custom-input" formControlName="category">
           <option value="">Choose Category...</option>
-          <option>Shoes</option>
-          <option>Clothes</option>
+          <option>Mens</option>
+          <option>Womens</option>
         </select>
       </div>
 

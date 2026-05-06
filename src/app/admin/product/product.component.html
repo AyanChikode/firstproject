@@ -7,12 +7,6 @@
       PRODUCT LIST
     </h5>
 
-    <!-- <button 
-      class="btn add-btn"
-      routerLink="/admin/add-product">
-      + Add Product
-    </button> -->
-
   </div>
 
   <!-- Table -->
@@ -23,6 +17,7 @@
       <thead>
         <tr>
           <th>Id</th>
+          <th>Image</th>
           <th>Title</th>
           <th>Price</th>
           <th>Brand</th>
@@ -35,7 +30,17 @@
 
         <tr *ngFor="let p of products; let i = index">
 
-          <td class="fw-semibold" >{{ i + 1 }}</td>
+          <td class="fw-semibold">{{ i + 1 }}</td>
+
+          <!-- Image -->
+          <td>
+            <img 
+              [src]="p.image" 
+              alt="{{ p.title }}" 
+              width="60" 
+              height="60"
+              class="rounded shadow-sm object-fit-cover">
+          </td>
 
           <td class="fw-semibold">
             {{ p.title }}
@@ -58,13 +63,13 @@
           <td class="fw-semibold">
 
             <button 
-              class="btn btn-sm edit-btn me-2 btn btn-outline-warning rounded-pill px-4 py-2 fw-semibold shadow-sm"
+              class="btn btn-sm btn-outline-warning rounded-pill px-4 py-2 fw-semibold shadow-sm me-2"
               (click)="onEdit(p.id!)">
               Edit
             </button>
 
             <button 
-              class="btn btn-sm delete-btn btn btn-outline-danger rounded-pill fw-semibold shadow-sm"
+              class="btn btn-sm btn-outline-danger rounded-pill fw-semibold shadow-sm"
               (click)="onDelete(p.id!)">
               Delete
             </button>
